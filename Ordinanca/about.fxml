@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="366.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <left>
+      <ImageView fitHeight="150.0" fitWidth="200.0" opacity="0.71" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+         <image>
+            <Image url="@../../../../Desktop/logo.png" />
+         </image>
+         <BorderPane.margin>
+            <Insets top="-97.0" />
+         </BorderPane.margin>
+         <viewport>
+            <Rectangle2D />
+         </viewport>
+      </ImageView>
+   </left>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="HOSPITAL SYSTEM">
+               <font>
+                  <Font name="Book Antiqua" size="34.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="36.0" top="33.0" />
+               </VBox.margin>
+            </Label>
+            <Label prefHeight="43.0" prefWidth="332.0" text="Is developed for menaging and manipulating ">
+               <VBox.margin>
+                  <Insets left="26.0" right="3.0" top="29.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label text=" the hospital's patient data">
+               <VBox.margin>
+                  <Insets left="22.0" top="-12.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+         </children></VBox>
+   </center>
+</BorderPane>
