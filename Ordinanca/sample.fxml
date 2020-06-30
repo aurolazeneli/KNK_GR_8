@@ -5,6 +5,7 @@
 <?import com.jfoenix.controls.JFXTextField?>
 <?import com.jfoenix.controls.JFXTreeTableView?>
 <?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TreeTableColumn?>
 <?import javafx.scene.control.TreeTableView?>
@@ -38,15 +39,15 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </JFXButton>
-            <JFXButton fx:id="BTNS" onAction="#deleteAction"  prefHeight="49.0" prefWidth="81.0" style="-fx-background-color: #43dda1;" text="DELETE" textFill="#fffefe">
+            <JFXButton fx:id="BTNS1" onAction="#deleteAction" prefHeight="49.0" prefWidth="81.0" style="-fx-background-color: #43dda1;" text="DELETE" textFill="#fffefe">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor></JFXButton>
-            <JFXButton fx:id="BTNS" onAction="#editAction" prefHeight="49.0" prefWidth="81.0" style="-fx-background-color: #43dda1;" text="EDIT" textFill="WHITE">
+            <JFXButton fx:id="BTNS2" onAction="#editAction" prefHeight="49.0" prefWidth="81.0" style="-fx-background-color: #43dda1;" text="EDIT" textFill="WHITE">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor></JFXButton>
-            <JFXButton fx:id="BTNS" onAction="#clearAction" prefHeight="49.0" prefWidth="81.0" style="-fx-background-color: #43dda1;" text="CLEAR" textFill="WHITE">
+            <JFXButton fx:id="BTNS3" onAction="#clearAction" prefHeight="49.0" prefWidth="81.0" style="-fx-background-color: #43dda1;" text="CLEAR" textFill="WHITE">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor></JFXButton>
@@ -79,7 +80,7 @@
          </children></AnchorPane>
       <AnchorPane layoutX="870.0" layoutY="395.0" prefHeight="244.0" prefWidth="273.0" style="-fx-border-color: #00000037;" AnchorPane.bottomAnchor="11.0" AnchorPane.leftAnchor="870.0" AnchorPane.rightAnchor="6.666666666666686" AnchorPane.topAnchor="395.0">
          <children>
-            <GridPane layoutX="18.0" layoutY="36.0" prefHeight="194.0" prefWidth="229.0" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="27.0" AnchorPane.topAnchor="35.0">
+            <GridPane fx:id="a_s" layoutX="18.0" layoutY="36.0" prefHeight="194.0" prefWidth="229.0" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="27.0" AnchorPane.topAnchor="35.0">
               <columnConstraints>
                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="108.0" minWidth="10.0" prefWidth="84.99997965494792" />
                   <ColumnConstraints hgrow="SOMETIMES" maxWidth="159.3333740234375" minWidth="10.0" prefWidth="141.66668701171875" />
@@ -93,12 +94,12 @@
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <Label alignment="CENTER" text="Patient Name" textFill="#444444" />
-                  <Label alignment="CENTER" text="Doctor Name" textFill="#444444" GridPane.rowIndex="1" />
-                  <Label alignment="CENTER" text="Age" textFill="#444444" GridPane.rowIndex="2" />
-                  <Label alignment="CENTER" text="Date" textFill="#444444" GridPane.rowIndex="3" />
-                  <Label alignment="CENTER" text="Type" textFill="#444444" GridPane.rowIndex="4" />
-                  <Label alignment="CENTER" text="Result" textFill="#444444" GridPane.rowIndex="5" />
+                  <Label fx:id="pn_s" alignment="CENTER" text="Patient Name" textFill="#444444" />
+                  <Label fx:id="dn_s" alignment="CENTER" text="Doctor Name" textFill="#444444" GridPane.rowIndex="1" />
+                  <Label fx:id="a_s" alignment="CENTER" text="Age" textFill="#444444" GridPane.rowIndex="2" />
+                  <Label fx:id="d_s" alignment="CENTER" text="Date" textFill="#444444" GridPane.rowIndex="3" />
+                  <Label fx:id="t_s" alignment="CENTER" text="Type" textFill="#444444" GridPane.rowIndex="4" />
+                  <Label fx:id="r_s" alignment="CENTER" text="Result" textFill="#444444" GridPane.rowIndex="5" />
                   <Label fx:id="nameLB" alignment="CENTER" prefHeight="22.0" prefWidth="137.0" text="Label" textFill="#494949" GridPane.columnIndex="1">
                      <font>
                         <Font size="15.0" />
@@ -132,5 +133,7 @@
                </children>
             </GridPane>
          </children></AnchorPane>
+      <Button layoutX="1112.0" layoutY="10.0" mnemonicParsing="false" onAction="#btnAL" prefHeight="26.0" prefWidth="33.0" text="AL" />
+      <Button layoutX="1071.0" layoutY="10.0" mnemonicParsing="false" onAction="#btnEN" prefHeight="26.0" prefWidth="33.0" text="EN" />
    </children>
 </AnchorPane>
