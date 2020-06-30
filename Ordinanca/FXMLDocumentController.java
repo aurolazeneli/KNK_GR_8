@@ -103,7 +103,7 @@ public class FXMLDocumentController implements Initializable {
                 JOptionPane.showMessageDialog(null, "Username And Password is Corect");
                 
                 btn_login.getScene().getWindow().hide();
-                Parent root = FXMLLoader.load(getClass().getResource("CPanel.fxml"));
+                Parent root = FXMLLoader.load(getClass().getResource("home.fxml"));
                 Stage mainStage = new Stage();
                 Scene scene = new Scene(root);
                 mainStage.setScene(scene);
