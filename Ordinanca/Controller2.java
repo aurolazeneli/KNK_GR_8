@@ -51,7 +51,34 @@ public class Controller2 implements Initializable {
 
     @FXML
     private TreeTableColumn<Model2, String> fromcol;
+    
 
+
+
+    @FXML
+    private Label medica_s;
+
+    @FXML
+    private Label indication_s;
+
+    @FXML
+    private Label quantity_s;
+    
+    
+    @FXML
+    private JFXTextField searchTF;
+
+    @FXML
+    private JFXButton BTNS;
+
+    @FXML
+    private JFXButton BTNS2;
+
+    @FXML
+    private JFXButton BTNS3;
+
+    @FXML
+    private JFXButton BTNS4;
 
 
     @FXML
@@ -65,10 +92,8 @@ public class Controller2 implements Initializable {
 
     @FXML
     private JFXTextField fromIN;
-
-  
-    @FXML
-    private JFXTextField searchTF;
+ 
+    
 
     @FXML
     private Label medLB;
@@ -81,7 +106,9 @@ public class Controller2 implements Initializable {
 
     @FXML
     private Label fromLB;
-
+    private ResourceBundle bundle;
+    private Locale locale;
+    
   
     
     ObservableList<Model2> list;
@@ -258,6 +285,42 @@ public class Controller2 implements Initializable {
 	    	Model2 m = new Model2(mediIN.getText(), indIN.getText(), quanIN.getText(), fromIN.getText());
 	    	treeItem.setValue(m);
 	    }
+	   @FXML
+	    private void btnEN(ActionEvent event) {
+	    	loadLang("en");
+	    }
+	    @FXML
+	    private void btnAL(ActionEvent event) {
+	    	loadLang("al");
+	    }
+
+
+	 
+	    public void loadLang(String lang) {
+	    	// TODO Auto-generated method stub
+	    	locale = new Locale(lang);
+	    	bundle = ResourceBundle.getBundle("login.lang",locale);
+
+	    	BTNS.setText(bundle.getString("BTNS_3"));
+	    	BTNS2.setText(bundle.getString("BTNS2_3"));
+	    	BTNS3.setText(bundle.getString("BTNS3_3"));
+	    	BTNS4.setText(bundle.getString("BTNS4_3"));
+	    	medica_s.setText(bundle.getString("medica_s_3"));
+	    	indication_s.setText(bundle.getString("indication_s_3"));
+	    	quantity_s.setText(bundle.getString("quantity_s_3"));
+	    	
+	    	searchTF.setPromptText(bundle.getString("searchTF_3"));
+	    	mediIN.setPromptText(bundle.getString("mediIN_3"));
+	    	indIN.setPromptText(bundle.getString("indIN_3"));
+	    	quanIN.setPromptText(bundle.getString("quanIN_3"));
+	    	fromIN.setPromptText(bundle.getString("fromIN_3"));
+	    	medcol.setText(bundle.getString("medcol_3"));
+	    	indcol.setText(bundle.getString("indcol_3"));
+	    	quancol.setText(bundle.getString("quancol_3"));
+	    	fromcol.setText(bundle.getString("fromcol_3"));
+	    	
+	    }
+	    
 	    
 	}
 
