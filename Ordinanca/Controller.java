@@ -77,7 +77,21 @@ public class Controller implements Initializable {
 
     @FXML
     private JFXComboBox<String> typeTF;
+    
+    @FXML
+    private Label pn_s;
+    @FXML
+    private Label dn_s;
 
+    @FXML
+    private Label d_s;
+
+    @FXML
+    private Label t_s;
+
+    @FXML
+    private Label r_s;
+  
     @FXML
     private Label nameLB;
 
@@ -95,6 +109,24 @@ public class Controller implements Initializable {
 
     @FXML
     private Label resultLB;
+    
+    @FXML
+    private JFXButton BTNS;
+
+    @FXML
+    private JFXButton BTNS1;
+
+    @FXML
+    private JFXButton BTNS2;
+
+    @FXML
+    private JFXButton BTNS3;
+
+
+    private ResourceBundle bundle;
+    private Locale locale;
+
+    
     
     ObservableList<Model> list;
 
@@ -285,6 +317,49 @@ public class Controller implements Initializable {
 	    	con.st.executeUpdate(query);
 	    	Model m = new Model(nameTF.getText(), dnameTF.getText(), ageTF.getText(), dateTF.getText(), typeTF.getSelectionModel().getSelectedItem(), resultTF.getText());
 	    	treeItem.setValue(m);
+	    }
+	 @FXML
+	    private void btnEN(ActionEvent event) {
+	    	loadLang("en");
+	    }
+	    @FXML
+	    private void btnAL(ActionEvent event) {
+	    	loadLang("al");
+	    }
+
+	    public void loadLang(String lang) {
+	    	// TODO Auto-generated method stub
+	    	locale = new Locale(lang);
+	    	bundle = ResourceBundle.getBundle("ordinance.lang",locale);
+
+	    	nameCol.setText(bundle.getString("nameCol2"));
+	    	ageCol.setText(bundle.getString("ageCol2"));
+	    	dateCol.setText(bundle.getString("dateCol2"));
+	    	typeCol.setText(bundle.getString("typeCol2"));
+	    	resultCol.setText(bundle.getString("resultCol2"));
+	    	searchTF.setPromptText(bundle.getString("searchTF2"));
+	    	dnameTF.setPromptText(bundle.getString("dnameTF2"));
+	    	nameTF.setPromptText(bundle.getString("nameTF2"));
+	    	ageTF.setPromptText(bundle.getString("ageTF2"));
+	    	resultTF.setPromptText(bundle.getString("resultTF2"));
+	    	dateTF.setPromptText(bundle.getString("dateTF2"));
+
+	    	BTNS.setText(bundle.getString("BTNS_2"));
+	    	BTNS1.setText(bundle.getString("BTNS1_2"));
+	    	BTNS2.setText(bundle.getString("BTNS2_2"));
+	    	BTNS3.setText(bundle.getString("BTNS3_2"));
+	    	
+	    	pn_s.setText(bundle.getString("pn_s2"));
+	    	dn_s.setText(bundle.getString("dn_s2"));
+	    	d_s.setText(bundle.getString("d_s2"));
+	    	t_s.setText(bundle.getString("t_s2"));
+	    	r_s.setText(bundle.getString("r_s2"));
+	    
+
+	    	
+	    	
+
+
 	    }
 	    
 	}
